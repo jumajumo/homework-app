@@ -7,3 +7,12 @@ spring:
     initialization-mode: never
     hikari:
       maximum-pool-size: 1
+---
+spring:
+  profiles: container
+  datasource:
+    url: "jdbc:sqlite:/etc/jumajumo/homework-app/sqlite.db"
+    driver-class-name: org.sqlite.JDBC
+    initialization-mode: never
+    hikari:
+      maximum-pool-size: 1
