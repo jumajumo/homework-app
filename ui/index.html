@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launchpad</title>
+
+    <script>
+        window["sap-ushell-config"] = {
+            defaultRenderer: "fiori2",
+            applications: {
+                "de-jumajumo-homework-app": {
+                    title: "Homework Activities",
+                    description: "Plan homework activities",
+                    additionalInformation: "SAPUI5.Component=de-jumajumo-homework-app",
+                    applicationType : "URL",
+                    url: "activities/webapp",
+                    navigationMode: "embedded"
+                },
+                "de-jumajumo-homework-task-app": {
+                    title: "Homework Tasks",
+                    description: "my upcoming homework tasks",
+                    additionalInformation: "SAPUI5.Component=de-jumajumo-homework-task-app",
+                    applicationType : "URL",
+                    url: "tasks/webapp",
+                    navigationMode: "embedded"
+                },
+            }
+        };
+    </script>
+
+    <script src="https://sapui5.hana.ondemand.com/1.74.0/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+    <script src="https://sapui5.hana.ondemand.com/1.74.0/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-theme="sap_fiori_3"
+        data-sap-ui-frameOptions="allow"
+    ></script>
+    <script>
+        sap.ui.getCore().attachInit(()=> sap.ushell.Container.createRenderer().placeAt("content"))
+    </script>
+
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>

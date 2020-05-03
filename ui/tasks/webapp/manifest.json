@@ -1,0 +1,91 @@
+
+{
+	"_version": "1.8.0",
+	"sap.app": {
+	  "id": "de-jumajumo-homework-task-app",
+	  "type": "application",
+	  "title": "{{appTitle}}",
+	  "description": "{{appDescription}}",
+	  "dataSources": {
+		"HomeworkTaskService": {
+		  "uri": "/odata/v4/HomeworkTaskService/",
+		  "type": "OData",
+		  "settings": {
+			"odataVersion": "4.0"
+		  }
+		}
+	  },
+	  "-sourceTemplate": {
+		"id": "ui5template.basicSAPUI5ApplicationProject",
+		"-id": "ui5template.smartTemplate",
+		"-version": "1.40.12"
+	  }
+	},
+	"sap.ui5": {
+	  "dependencies": {
+		"libs": {
+		  "sap.fe": {
+			
+		  }
+		}
+	  },
+	  "models": {
+		"i18n": {
+		  "type": "sap.ui.model.resource.ResourceModel",
+		  "uri": "i18n/i18n.properties"
+		},
+		"": {
+		  "dataSource": "HomeworkTaskService",
+		  "settings": {
+			"synchronizationMode": "None",
+			"operationMode": "Server",
+			"autoExpandSelect": true,
+			"earlyRequests": true,
+			"groupProperties": {
+			  "default": {
+				"submit": "Auto"
+			  }
+			}
+		  }
+		}
+	  },
+	  "routing": {
+		"routes": [
+		  {
+			"pattern": ":?query:",
+			"name": "ActivityTask",
+			"target": "ActivityTask"
+		  }
+		],
+		"targets": {
+		  "ActivityTask": {
+			"type": "Component",
+			"id": "ActivityTask",
+			"name": "sap.fe.templates.ListReport",
+			"options": {
+			  "settings": {
+				"entitySet": "ActivityTask",
+				"navigation": {
+				  
+				}
+			  }
+			}
+		  }
+		}
+	  },
+	  "contentDensities": {
+		"compact": true,
+		"cozy": true
+	  }
+	},
+	"sap.ui": {
+	  "technology": "UI5",
+	  "fullWidth": false
+	},
+	"sap.fiori": {
+	  "registrationIds": [
+		
+	  ],
+	  "archeType": "transactional"
+	}
+  }

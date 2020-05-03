@@ -1,0 +1,5 @@
+CODE;NAME;DESCR
+0;HARD;it is not allowed to exceed the due date
+7;WEEK;due date can be exceeded by one week
+30;MONTH;due date can be exceeded by one month
+99;SOFT;due date is just a proposal

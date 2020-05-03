@@ -1,0 +1,3 @@
+CODE;NAME;DESCR
+0;BasedOnDueDate;the interval is calculated based on the last due date, independent on the done date
+1;BasedOnDoneDate;the interval is calculated based on the last done date, independent on the due date
