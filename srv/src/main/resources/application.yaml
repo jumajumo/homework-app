@@ -11,7 +11,7 @@ spring:
 spring:
   profiles: container
   datasource:
-    url: "jdbc:sqlite:/etc/jumajumo/homework-app/sqlite.db"
+    url: "jdbc:sqlite:/var/jumajumo/sqlite.db"
     driver-class-name: org.sqlite.JDBC
     initialization-mode: never
     hikari:

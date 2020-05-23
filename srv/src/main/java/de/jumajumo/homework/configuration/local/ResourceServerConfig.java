@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Profile("default")
+@Profile("container")
 @Configuration
 @EnableWebMvc
 public class ResourceServerConfig implements WebMvcConfigurer {
